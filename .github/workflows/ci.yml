@@ -24,3 +24,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: node --version
+
+    solo-en-main:
+      if: github.ref == 'refs/heads/main'
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "Esto solo se ve en main"
